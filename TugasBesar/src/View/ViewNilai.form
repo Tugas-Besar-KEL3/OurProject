@@ -107,7 +107,7 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\MY PC\Documents\PBO\TugasBesar\iconTubes\if_icon_sets_school_outline_hand_drawn_iconfinder-01_2087709.png"/>
+              <Image iconType="2" name="C:\Users\MY PC\Documents\PBO\TugasBesar\src\iconTubes\if_icon_sets_school_outline_hand_drawn_iconfinder-01_2087709.png"/>
             </Property>
           </Properties>
         </Component>
@@ -153,7 +153,7 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="91" max="-2" attributes="0"/>
-                  <EmptySpace pref="142" max="32767" attributes="0"/>
+                  <EmptySpace pref="199" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
