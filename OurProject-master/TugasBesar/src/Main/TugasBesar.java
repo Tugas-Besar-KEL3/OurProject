@@ -10,6 +10,7 @@ import Exception.data_mapelException;
 import Service.data_mapelDao;
 import database.medikacomDatabase;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  *
@@ -23,14 +24,14 @@ public class TugasBesar {
     public static void main(String[] args) throws SQLException, data_mapelException {
         // TODO code application logic here
         data_mapelDao dao = medikacomDatabase.getData_mapelDao();
-        data_mapel data_mapel= new data_mapel();
-        data_mapel.setKode_mapel("12345");
-        data_mapel.setMapel("SBD");
+        data_mapel data_mapel = new data_mapel();
+        data_mapel.setKode_mapel("17623AK");
+        data_mapel.setMapel("Arsitektur Komputer");
         data_mapel.setProg_keahlian("RPL");
-        data_mapel.setKelas("RPL XII-B");
+        data_mapel.setKelas("XII");
         data_mapel.setKurikulum("2013");
         
         dao.insertData_mapel(data_mapel);
+        }
     }
 
-}

@@ -13,6 +13,7 @@ import java.util.Objects;
  */
 public class data_mapel {
 
+    private Integer id;
     private String kode_mapel;
     private String mapel;
     private String prog_keahlian;
@@ -20,7 +21,6 @@ public class data_mapel {
     private String kurikulum;
 
     public data_mapel() {
-
     }
 
     public data_mapel(String kode_mapel, String mapel, String prog_keahlian, String kelas, String kurikulum) {
@@ -33,12 +33,13 @@ public class data_mapel {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 73 * hash + Objects.hashCode(this.kode_mapel);
-        hash = 73 * hash + Objects.hashCode(this.mapel);
-        hash = 73 * hash + Objects.hashCode(this.prog_keahlian);
-        hash = 73 * hash + Objects.hashCode(this.kelas);
-        hash = 73 * hash + Objects.hashCode(this.kurikulum);
+        int hash = 3;
+        hash = 17 * hash + Objects.hashCode(this.id);
+        hash = 17 * hash + Objects.hashCode(this.kode_mapel);
+        hash = 17 * hash + Objects.hashCode(this.mapel);
+        hash = 17 * hash + Objects.hashCode(this.prog_keahlian);
+        hash = 17 * hash + Objects.hashCode(this.kelas);
+        hash = 17 * hash + Objects.hashCode(this.kurikulum);
         return hash;
     }
 
@@ -70,6 +71,14 @@ public class data_mapel {
             return false;
         }
         return true;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getKode_mapel() {

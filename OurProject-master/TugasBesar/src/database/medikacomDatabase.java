@@ -21,13 +21,6 @@ public class medikacomDatabase {
 
     private static data_mapelDao data_mapelDao;
 
-    public static data_mapelDao getData_mapelDao() throws SQLException {
-        if (data_mapelDao == null) {
-            data_mapelDao = new data_mapelDaoImpl(getConnection());
-        }
-        return data_mapelDao;
-    }
-
     public static Connection getConnection() throws SQLException {
         if (connection == null) {
             MysqlDataSource dataSource = new MysqlDataSource();
@@ -35,8 +28,14 @@ public class medikacomDatabase {
             dataSource.setUser("root");
             dataSource.setPassword("");
             connection = dataSource.getConnection();
-            System.out.println("Konek cuy!");
         }
         return connection;
+    }
+
+    public static data_mapelDao getData_mapelDao() throws SQLException {
+        if (data_mapelDao == null) {
+            data_mapelDao = new data_mapelDaoImpl(getConnection());
+        }
+        return data_mapelDao;
     }
 }

@@ -21,7 +21,7 @@ public interface data_mapelDao {
 
     public void updateData_mapel(data_mapel data_mapel) throws data_mapelException;
 
-    public void deleteData_mapel(String kode_mapel) throws data_mapelException;
+    public void deleteData_mapel(data_mapel data_mapel) throws data_mapelException;
 
     //reload data_mapel 
     public List<data_mapel> selectAllData_mapel() throws data_mapelException;

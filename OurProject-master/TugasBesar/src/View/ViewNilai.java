@@ -41,7 +41,7 @@ public class ViewNilai extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setText("Menu Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -52,7 +52,7 @@ public class ViewNilai extends javax.swing.JFrame {
 
         jButton2.setText("Lihat Nilai");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\MY PC\\Documents\\PBO\\TugasBesar\\src\\iconTubes\\if_icon_sets_school_outline_hand_drawn_iconfinder-01_2087709.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\MY PC\\Pictures\\logomedikacom.jpg")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -88,11 +88,11 @@ public class ViewNilai extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(242, 242, 242));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 0));
 
         jLabel2.setBackground(new java.awt.Color(153, 153, 255));
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel2.setForeground(new java.awt.Color(204, 204, 0));
         jLabel2.setText("Masukkan NIS Anda :");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(

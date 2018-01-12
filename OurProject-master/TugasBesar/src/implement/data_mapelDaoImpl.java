@@ -28,7 +28,7 @@ public class data_mapelDaoImpl implements data_mapelDao {
         this.connection = connection;
     }
 
-    private final String insertData_mapel = "INSERT INTO DATA_MAPEL (KODE_MAPEL, MAPEL, PROG_KEAHLIAN, KELAS, KURIKULUM) VALUES (?????)";
+    private final String insertData_mapel = "INSERT INTO DATA_MAPEL VALUES (NULL,?,?,?,?,?)";
 
     @Override
     public void insertData_mapel(data_mapel data_mapel) throws data_mapelException {
@@ -61,7 +61,7 @@ public class data_mapelDaoImpl implements data_mapelDao {
     }
 
     @Override
-    public void deleteData_mapel(String kode_mapel) throws data_mapelException {
+    public void deleteData_mapel(data_mapel data_mapel) throws data_mapelException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -76,8 +76,9 @@ public class data_mapelDaoImpl implements data_mapelDao {
             ResultSet result = statement.executeQuery(selectAll);
             while (result.next()) {
                 data_mapel data_mapel = new data_mapel();
+                data_mapel.setId(result.getInt("ID"));
                 data_mapel.setKode_mapel(result.getString("KODE_MAPEL"));
-                data_mapel.setMapel(result.getString("MAPEL"));
+                data_mapel.setMapel(result.getString("MATA_PELAJARAN"));
                 data_mapel.setProg_keahlian(result.getString("PROG_KEAHLIAN"));
                 data_mapel.setKelas(result.getString("KELAS"));
                 data_mapel.setKurikulum(result.getString("KURIKULUM"));

@@ -51,7 +51,7 @@ public class FormLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setText("Menu Login");
 
@@ -62,7 +62,7 @@ public class FormLogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\MY PC\\Documents\\PBO\\TugasBesar\\src\\iconTubes\\if_icon_sets_school_outline_hand_drawn_iconfinder-01_2087709.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconTubes/logomedikacom.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -95,9 +95,9 @@ public class FormLogin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(242, 242, 242));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 0));
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel4.setBackground(new java.awt.Color(204, 204, 0));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel4MouseClicked(evt);
@@ -128,8 +128,9 @@ public class FormLogin extends javax.swing.JFrame {
                     .addGap(0, 9, Short.MAX_VALUE)))
         );
 
-        txtUsername.setBackground(new java.awt.Color(242, 242, 242));
+        txtUsername.setBackground(new java.awt.Color(0, 153, 0));
         txtUsername.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
+        txtUsername.setForeground(new java.awt.Color(255, 255, 255));
         txtUsername.setText("Enter Your Username");
         txtUsername.setBorder(null);
         txtUsername.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -143,7 +144,12 @@ public class FormLogin extends javax.swing.JFrame {
             }
         });
 
-        txtPassword.setBackground(new java.awt.Color(242, 242, 242));
+        jSeparator1.setBackground(new java.awt.Color(255, 102, 102));
+
+        jSeparator2.setBackground(new java.awt.Color(255, 102, 102));
+
+        txtPassword.setBackground(new java.awt.Color(0, 153, 0));
+        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
         txtPassword.setText("jPasswordField1");
         txtPassword.setBorder(null);
         txtPassword.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -158,11 +164,11 @@ public class FormLogin extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel9.setForeground(new java.awt.Color(204, 204, 0));
         jLabel9.setText("Password");
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(102, 102, 255));
+        jLabel10.setForeground(new java.awt.Color(204, 204, 0));
         jLabel10.setText("Username");
 
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\MY PC\\Documents\\PBO\\TugasBesar\\src\\iconTubes\\user-64.png")); // NOI18N
