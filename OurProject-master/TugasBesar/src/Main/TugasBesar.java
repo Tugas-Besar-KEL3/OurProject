@@ -6,7 +6,7 @@
 package Main;
 
 import Entity.data_mapel;
-import Exception.data_mapelException;
+import Error.data_mapelException;
 import Service.data_mapelDao;
 import database.medikacomDatabase;
 import java.sql.SQLException;
@@ -24,14 +24,23 @@ public class TugasBesar {
     public static void main(String[] args) throws SQLException, data_mapelException {
         // TODO code application logic here
         data_mapelDao dao = medikacomDatabase.getData_mapelDao();
-        data_mapel data_mapel = new data_mapel();
-        data_mapel.setKode_mapel("17623AK");
-        data_mapel.setMapel("Arsitektur Komputer");
-        data_mapel.setProg_keahlian("RPL");
-        data_mapel.setKelas("XII");
-        data_mapel.setKurikulum("2013");
-        
-        dao.insertData_mapel(data_mapel);
+        dao.deleteData_mapel("A8899");
+        /*
+        data_mapel data_mapel = dao.getData_mapel("A7543");
+        System.out.println("ID PENGAJAR : "+data_mapel.getIdpengajar());
+        System.out.println("MATA PELAJARAN : "+data_mapel.getMapel());
+        System.out.println("PROG. KEAHLIAN : "+data_mapel.getPkeahlian());
+        System.out.println("KURIKULUM : "+data_mapel.getKurikulum());
+        /*
+        List<data_mapel> list = dao.selectAllData_mapel();
+        for (data_mapel data_mapel : list) {
+            System.out.println("KODEMAPEL : " + data_mapel.getKodemapel());
+            System.out.println("IDPENGAJAR : " + data_mapel.getIdpengajar());
+            System.out.println("MAPEL : " + data_mapel.getMapel());
+            System.out.println("PROG.KEAHLIAN : " + data_mapel.getPkeahlian());
+            System.out.println("KURIKULUM : " + data_mapel.getKurikulum());
+            System.out.println("----------------------------------------");
+        */
         }
     }
 

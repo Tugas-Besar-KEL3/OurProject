@@ -64,11 +64,11 @@ public class DashboardView extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblNilai = new javax.swing.JTable();
-        txtKdMapel = new javax.swing.JTextField();
         txtUts = new javax.swing.JTextField();
         txtUas = new javax.swing.JTextField();
         btnTambah = new javax.swing.JButton();
         cbNis = new javax.swing.JComboBox<>();
+        cbKodeMapel = new javax.swing.JComboBox<>();
         DataMapel = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -79,11 +79,11 @@ public class DashboardView extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         tblMapel = new javax.swing.JTable();
         txtKodeMapel = new javax.swing.JTextField();
-        txtIdPengajar = new javax.swing.JTextField();
         txtMapel = new javax.swing.JTextField();
         txtJurusan = new javax.swing.JTextField();
         txtKurikulum = new javax.swing.JTextField();
         buttonAdd = new javax.swing.JButton();
+        cbIdPengajar = new javax.swing.JComboBox<>();
         DataPengajar = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -370,12 +370,6 @@ public class DashboardView extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tblNilai);
 
-        txtKdMapel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKdMapelActionPerformed(evt);
-            }
-        });
-
         btnTambah.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         btnTambah.setText("Tambah Data");
 
@@ -386,6 +380,13 @@ public class DashboardView extends javax.swing.JFrame {
             }
         });
 
+        cbKodeMapel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Pilih Kode Mapel-" }));
+        cbKodeMapel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbKodeMapelActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout DataNilaiLayout = new javax.swing.GroupLayout(DataNilai);
         DataNilai.setLayout(DataNilaiLayout);
         DataNilaiLayout.setHorizontalGroup(
@@ -393,7 +394,7 @@ public class DashboardView extends javax.swing.JFrame {
             .addGroup(DataNilaiLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(DataNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
                     .addGroup(DataNilaiLayout.createSequentialGroup()
                         .addGroup(DataNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DataNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -404,7 +405,8 @@ public class DashboardView extends javax.swing.JFrame {
                                 .addGroup(DataNilaiLayout.createSequentialGroup()
                                     .addComponent(jLabel13)
                                     .addGap(18, 18, 18)
-                                    .addComponent(txtKdMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cbKodeMapel, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(1, 1, 1))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, DataNilaiLayout.createSequentialGroup()
                                     .addGroup(DataNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel16)
@@ -430,7 +432,7 @@ public class DashboardView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DataNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(txtKdMapel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbKodeMapel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DataNilaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtUts, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -443,7 +445,7 @@ public class DashboardView extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnTambah)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         DataMapel.setBackground(new java.awt.Color(0, 153, 0));
@@ -491,12 +493,6 @@ public class DashboardView extends javax.swing.JFrame {
             }
         });
 
-        txtIdPengajar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdPengajarActionPerformed(evt);
-            }
-        });
-
         txtJurusan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtJurusanActionPerformed(evt);
@@ -505,6 +501,8 @@ public class DashboardView extends javax.swing.JFrame {
 
         buttonAdd.setFont(new java.awt.Font("Century Gothic", 0, 11)); // NOI18N
         buttonAdd.setText("Tambah Data");
+
+        cbIdPengajar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Pilih ID Pengajar-" }));
 
         javax.swing.GroupLayout DataMapelLayout = new javax.swing.GroupLayout(DataMapel);
         DataMapel.setLayout(DataMapelLayout);
@@ -527,16 +525,12 @@ public class DashboardView extends javax.swing.JFrame {
                                             .addComponent(jLabel20)
                                             .addComponent(jLabel21)
                                             .addComponent(jLabel23))
+                                        .addGap(44, 44, 44)
                                         .addGroup(DataMapelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(DataMapelLayout.createSequentialGroup()
-                                                .addGap(44, 44, 44)
-                                                .addComponent(txtIdPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DataMapelLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(DataMapelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(txtJurusan, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
-                                                    .addComponent(txtMapel)
-                                                    .addComponent(txtKurikulum)))))
+                                            .addComponent(txtJurusan, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                                            .addComponent(txtMapel, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                                            .addComponent(txtKurikulum, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                                            .addComponent(cbIdPengajar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DataMapelLayout.createSequentialGroup()
                                         .addComponent(jLabel22)
                                         .addGap(304, 304, 304)))
@@ -560,7 +554,7 @@ public class DashboardView extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addGroup(DataMapelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(txtIdPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbIdPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DataMapelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
@@ -640,10 +634,13 @@ public class DashboardView extends javax.swing.JFrame {
         DataPengajar.setLayout(DataPengajarLayout);
         DataPengajarLayout.setHorizontalGroup(
             DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DataPengajarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
             .addGroup(DataPengajarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(DataPengajarLayout.createSequentialGroup()
                         .addComponent(jLabel25)
                         .addGap(8, 8, 8)
@@ -651,21 +648,21 @@ public class DashboardView extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addComponent(btnPerempuan2))
                     .addComponent(buttonAdd1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel24)
+                    .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(DataPengajarLayout.createSequentialGroup()
+                            .addGap(87, 87, 87)
+                            .addComponent(txtNamaPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DataPengajarLayout.createSequentialGroup()
+                            .addComponent(jLabel26)
+                            .addGap(304, 304, 304))))
+                .addContainerGap(212, Short.MAX_VALUE))
             .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DataPengajarLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(DataPengajarLayout.createSequentialGroup()
-                            .addComponent(jLabel27)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNamaPengajar, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
-                                .addComponent(txtIDPengajar)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DataPengajarLayout.createSequentialGroup()
-                            .addComponent(jLabel26)
-                            .addGap(304, 304, 304)))
+                    .addComponent(jLabel27)
+                    .addGap(19, 19, 19)
+                    .addComponent(txtIDPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(212, Short.MAX_VALUE)))
         );
         DataPengajarLayout.setVerticalGroup(
@@ -673,29 +670,29 @@ public class DashboardView extends javax.swing.JFrame {
             .addGroup(DataPengajarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel24)
-                .addGap(74, 74, 74)
+                .addGap(58, 58, 58)
+                .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(DataPengajarLayout.createSequentialGroup()
+                        .addComponent(jLabel26)
+                        .addGap(3, 3, 3))
+                    .addComponent(txtNamaPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLakilaki)
                     .addComponent(btnPerempuan2)
                     .addComponent(jLabel25))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(buttonAdd1)
-                .addGap(48, 48, 48))
+                .addContainerGap(82, Short.MAX_VALUE))
             .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DataPengajarLayout.createSequentialGroup()
                     .addGap(49, 49, 49)
                     .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel27)
                         .addComponent(txtIDPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(7, 7, 7)
-                    .addGroup(DataPengajarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(DataPengajarLayout.createSequentialGroup()
-                            .addComponent(jLabel26)
-                            .addGap(3, 3, 3))
-                        .addComponent(txtNamaPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(396, Short.MAX_VALUE)))
+                    .addContainerGap(383, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -710,14 +707,11 @@ public class DashboardView extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(DataMapel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(DataPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(DataPengajar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 548, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 452, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(DataSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -725,10 +719,7 @@ public class DashboardView extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(DataMapel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(DataPengajar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(DataPengajar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -792,10 +783,6 @@ public class DashboardView extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void txtIdPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPengajarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdPengajarActionPerformed
-
     private void txtJurusanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJurusanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtJurusanActionPerformed
@@ -828,10 +815,6 @@ public class DashboardView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtKelasActionPerformed
 
-    private void txtKdMapelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKdMapelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtKdMapelActionPerformed
-
     private void btnDataPengajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataPengajarActionPerformed
         // TODO add your handling code here:
         DataSiswa.setVisible(false);
@@ -839,6 +822,10 @@ public class DashboardView extends javax.swing.JFrame {
         DataMapel.setVisible(false);
         DataPengajar.setVisible(true);
     }//GEN-LAST:event_btnDataPengajarActionPerformed
+
+    private void cbKodeMapelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbKodeMapelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbKodeMapelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -893,6 +880,8 @@ public class DashboardView extends javax.swing.JFrame {
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton buttonAdd;
     private javax.swing.JButton buttonAdd1;
+    private javax.swing.JComboBox<String> cbIdPengajar;
+    private javax.swing.JComboBox<String> cbKodeMapel;
     private javax.swing.JComboBox<String> cbNis;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -931,9 +920,7 @@ public class DashboardView extends javax.swing.JFrame {
     private javax.swing.JTable tblSiswa;
     private javax.swing.JTextField txtAlamat;
     private javax.swing.JTextField txtIDPengajar;
-    private javax.swing.JTextField txtIdPengajar;
     private javax.swing.JTextField txtJurusan;
-    private javax.swing.JTextField txtKdMapel;
     private javax.swing.JTextField txtKelas;
     private javax.swing.JTextField txtKodeMapel;
     private javax.swing.JTextField txtKurikulum;

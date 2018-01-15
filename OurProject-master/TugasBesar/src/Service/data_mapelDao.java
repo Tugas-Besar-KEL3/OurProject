@@ -6,7 +6,7 @@
 package Service;
 
 import Entity.data_mapel;
-import Exception.data_mapelException;
+import Error.data_mapelException;
 import java.util.List;
 
 /**
@@ -21,8 +21,10 @@ public interface data_mapelDao {
 
     public void updateData_mapel(data_mapel data_mapel) throws data_mapelException;
 
-    public void deleteData_mapel(data_mapel data_mapel) throws data_mapelException;
+    public void deleteData_mapel(String kodemapel) throws data_mapelException;
 
     //reload data_mapel 
     public List<data_mapel> selectAllData_mapel() throws data_mapelException;
+
+    public data_mapel getData_mapel(String kodemapel) throws data_mapelException;
 }

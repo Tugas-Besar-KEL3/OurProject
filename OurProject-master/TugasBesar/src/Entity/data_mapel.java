@@ -13,33 +13,31 @@ import java.util.Objects;
  */
 public class data_mapel {
 
-    private Integer id;
-    private String kode_mapel;
+    private String kodemapel;
+    private Integer idpengajar;
     private String mapel;
-    private String prog_keahlian;
-    private String kelas;
+    private String pkeahlian;
     private String kurikulum;
 
     public data_mapel() {
     }
 
-    public data_mapel(String kode_mapel, String mapel, String prog_keahlian, String kelas, String kurikulum) {
-        this.kode_mapel = kode_mapel;
+    public data_mapel(String kodemapel, Integer idpengajar, String mapel, String pkeahlian, String kurikulum) {
+        this.kodemapel = kodemapel;
+        this.idpengajar = idpengajar;
         this.mapel = mapel;
-        this.prog_keahlian = prog_keahlian;
-        this.kelas = kelas;
+        this.pkeahlian = pkeahlian;
         this.kurikulum = kurikulum;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 17 * hash + Objects.hashCode(this.id);
-        hash = 17 * hash + Objects.hashCode(this.kode_mapel);
-        hash = 17 * hash + Objects.hashCode(this.mapel);
-        hash = 17 * hash + Objects.hashCode(this.prog_keahlian);
-        hash = 17 * hash + Objects.hashCode(this.kelas);
-        hash = 17 * hash + Objects.hashCode(this.kurikulum);
+        int hash = 5;
+        hash = 23 * hash + Objects.hashCode(this.kodemapel);
+        hash = 23 * hash + Objects.hashCode(this.idpengajar);
+        hash = 23 * hash + Objects.hashCode(this.mapel);
+        hash = 23 * hash + Objects.hashCode(this.pkeahlian);
+        hash = 23 * hash + Objects.hashCode(this.kurikulum);
         return hash;
     }
 
@@ -55,38 +53,38 @@ public class data_mapel {
             return false;
         }
         final data_mapel other = (data_mapel) obj;
-        if (!Objects.equals(this.kode_mapel, other.kode_mapel)) {
+        if (!Objects.equals(this.kodemapel, other.kodemapel)) {
             return false;
         }
         if (!Objects.equals(this.mapel, other.mapel)) {
             return false;
         }
-        if (!Objects.equals(this.prog_keahlian, other.prog_keahlian)) {
-            return false;
-        }
-        if (!Objects.equals(this.kelas, other.kelas)) {
+        if (!Objects.equals(this.pkeahlian, other.pkeahlian)) {
             return false;
         }
         if (!Objects.equals(this.kurikulum, other.kurikulum)) {
             return false;
         }
+        if (!Objects.equals(this.idpengajar, other.idpengajar)) {
+            return false;
+        }
         return true;
     }
 
-    public Integer getId() {
-        return id;
+    public String getKodemapel() {
+        return kodemapel;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setKodemapel(String kodemapel) {
+        this.kodemapel = kodemapel;
     }
 
-    public String getKode_mapel() {
-        return kode_mapel;
+    public Integer getIdpengajar() {
+        return idpengajar;
     }
 
-    public void setKode_mapel(String kode_mapel) {
-        this.kode_mapel = kode_mapel;
+    public void setIdpengajar(Integer idpengajar) {
+        this.idpengajar = idpengajar;
     }
 
     public String getMapel() {
@@ -97,20 +95,12 @@ public class data_mapel {
         this.mapel = mapel;
     }
 
-    public String getProg_keahlian() {
-        return prog_keahlian;
+    public String getPkeahlian() {
+        return pkeahlian;
     }
 
-    public void setProg_keahlian(String prog_keahlian) {
-        this.prog_keahlian = prog_keahlian;
-    }
-
-    public String getKelas() {
-        return kelas;
-    }
-
-    public void setKelas(String kelas) {
-        this.kelas = kelas;
+    public void setPkeahlian(String pkeahlian) {
+        this.pkeahlian = pkeahlian;
     }
 
     public String getKurikulum() {
@@ -120,5 +110,6 @@ public class data_mapel {
     public void setKurikulum(String kurikulum) {
         this.kurikulum = kurikulum;
     }
+
 
 }
